@@ -10,11 +10,12 @@ import com.sunan.logutils.bean.SourceLine;
 
 public class IISLogProcess implements LogProcess<SourceLine> {
 	
-	private static final SimpleDateFormat sdf  =   new  SimpleDateFormat( "yyyy-MM-dd HH:mm:ss" ); 
+//	private static final SimpleDateFormat sdf  =   new  SimpleDateFormat( "yyyy-MM-dd HH:mm:ss" ); 
 
 	@Override
 	public LogLine process(SourceLine line) throws LogException, ParseException {
 		LogLine result = new LogLine();
+		SimpleDateFormat sdf  =   new  SimpleDateFormat( "yyyy-MM-dd HH:mm:ss" ); 
 		
 		if(line == null){
 			throw new LogException("this line is null");
